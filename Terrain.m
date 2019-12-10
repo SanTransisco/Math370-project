@@ -70,7 +70,7 @@ classdef Terrain
             z = max(max(obj.Z));
             camproj('orthographic')
             camposm(x , y ,z+1000);
-            %lighting gouraud
+            lighting gouraud
             camtargm(mean(obj.latlim) , mean(obj.lonlim), z);
             plabel off
             mlabel off
@@ -95,7 +95,7 @@ classdef Terrain
                 for i=1:100
             	camva(5)
                 campos([l(i) L(i) 10000])
-                camtarget([mean(l) mean(L) max(max(obj.Z))])
+                camtarget([l(i) L(i) max(max(obj.Z))])
                 drawnow
                 pause(.1)
                 end
