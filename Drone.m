@@ -20,6 +20,8 @@ classdef Drone
         function view(obj)
             ax = gca;
             ax.CameraViewAngle = 15;
+            zoom(2.5)
+            view()
         end
         
         function obj = fly_to(obj,dest,speed)
@@ -30,8 +32,9 @@ classdef Drone
             for n = 1:length(T)
                 V = m*T(n) + b;
                 camposm(V(1),V(2),V(3));
-                obj.view();
+                view();
                 pause(1/speed);
+                
             end
             obj.Current_Location = X2;
         end
@@ -43,8 +46,8 @@ classdef Drone
             T = linspace(0,1,100);
             for n = 1:length(T)
                 V = m*T(n) + b;
-                camtarm(V(1),V(2),V(3));
-                obj.view();
+                camtargm(V(1),V(2),V(3));
+                view();
                 pause(1/speed);
             end
             obj.Current_Target = X2;

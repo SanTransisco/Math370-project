@@ -1,6 +1,7 @@
 % Trenton Jansen
 %h is the light handle.
 function sunsetlights(h)
+    lighting gouraud
     redsunset=253;%variables
     yellowsunset=94;
     bluesunset=83;
@@ -10,6 +11,7 @@ function sunsetlights(h)
     sunsetanglechange=20;
     %function
     p=h.Position;
+    
     r=sqrt(p(1)^2+p(2)^2);
     angle=atan(p(3)/r);
     red=253;
