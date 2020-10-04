@@ -1,5 +1,5 @@
 # Math370-project
-
+Using Matlab I use USGS DEM data and the mapping toolbox in matlab to simulate terrain. In combination with satelite imagery we drape the image over the altitude data to create a recreation of the terrain only using the DEM data as input.
 # Demos
 There are 2 Main demos in the project
 1.) Sunrise_Demo.m
